@@ -1,0 +1,40 @@
+name: tugas3_tpm
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.6.1 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.0.6
+  intl: ^0.18.0
+  url_launcher: ^6.3.1
+  google_maps_flutter: ^2.5.0
+  geolocator: ^10.1.0
+  permission_handler: ^11.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logos/logo-hijau.png
+    - assets/logos/logo-putih.png
+    - assets/images/header_menu.png
+    - assets/images/logo-hijau.png
+    - assets/images/logo-hijau.jpg
+    - assets/images/anggota1.jpg
+    - assets/images/anggota2.jpg
+
+fonts:
+  - family: Poppins
+    fonts:
+      - asset: assets/fonts/Poppins-Regular.ttf
+      - asset: assets/fonts/Poppins-Bold.ttf
