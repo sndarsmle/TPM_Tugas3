@@ -135,45 +135,53 @@ class _StopwatchPageState extends State<StopwatchPage> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Column(
                   children: [
-                    ElevatedButton.icon(
-                      onPressed: _isRunning ? _pauseStopwatch : _startStopwatch,
-                      icon: Icon(
-                        _isRunning ? Icons.pause : Icons.play_arrow,
-                        color: Colors.white,
-                      ),
-                      label: Text(_isRunning ? 'Pause' : 'Start', style: const TextStyle(color: Colors.white)),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            _isRunning ? Colors.orange : Colors.green,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 25, vertical: 15),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton.icon(
+                          onPressed:
+                              _isRunning ? _pauseStopwatch : _startStopwatch,
+                          icon: Icon(
+                            _isRunning ? Icons.pause : Icons.play_arrow,
+                            color: Colors.white,
+                          ),
+                          label: Text(_isRunning ? 'Pause' : 'Start',
+                              style: const TextStyle(color: Colors.white)),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                _isRunning ? Colors.orange : Colors.green,
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 25, vertical: 15),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    ElevatedButton.icon(
-                      onPressed: _resetStopwatch,
-                      icon: const Icon(Icons.refresh, color: Colors.white),
-                      label: const Text('Reset', style: const TextStyle(color: Colors.white)),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 25, vertical: 15),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                        const SizedBox(width: 20),
+                        ElevatedButton.icon(
+                          onPressed: _resetStopwatch,
+                          icon: const Icon(Icons.refresh, color: Colors.white),
+                          label: const Text('Reset',
+                              style: const TextStyle(color: Colors.white)),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.red,
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 25, vertical: 15),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                    const SizedBox(width: 20),
+                    const SizedBox(height: 16),
                     ElevatedButton.icon(
-                      onPressed: _addLap, // Menambahkan fitur lap
+                      onPressed: _addLap,
                       icon: const Icon(Icons.flag, color: Colors.white),
-                      label: const Text('Lap', style: const TextStyle(color: Colors.white)),
+                      label: const Text('Lap',
+                          style: const TextStyle(color: Colors.white)),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         padding: const EdgeInsets.symmetric(
